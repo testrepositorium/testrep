@@ -1,0 +1,368 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body {
+    font-family: "Segoe ui";
+}
+
+#firstDiv {
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 940px;
+    height: 70px;
+    background: #e4e4e4;
+    border-radius: 2px;
+    color: #949494;
+}
+
+#firstDiv ul li {
+    float: left;
+    list-style: none;
+}
+
+#firstDiv ul li:first-child, #firstDiv select {
+    width: 150px;
+}
+
+#firstDiv ul li:nth-child(2){
+    width: 590px;
+    margin-left: 20px;
+}
+
+#firstDiv form {
+    display: block; /*Блочный элемент, т.е. все идет друг под другом*/
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    padding:5px 0;
+}
+
+input[name=inputForTask]  {
+    margin-left: 20px;
+    width: 490px;
+}
+
+input[someProperty=nameForUnusualProperty] {
+    width: 150px;
+    background: #029b29;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 26px;
+}
+
+input[someProperty=nameForUnusualProperty]:hover {
+    background: #00671b;
+}
+
+#secondDiv{
+    margin: 10px auto;
+    background: #e4e4e4;
+    width: 900px;
+    border-radius: 2px;
+    padding: 10px 20px;
+    height: 100px;
+}
+
+#secondDiv select {
+    margin: 0 20px;
+    width: 140px;
+}
+
+.filterText {
+    color: #909090;
+    margin-right: 5px;
+}
+
+#secondDiv input[type=checkbox] {
+    margin-right:10px;
+ }
+
+label[for=someCheck1] {
+    margin-left: 40px;
+}
+
+button[name=firstButton], button[name=secondButton] {
+    width: 140px;
+    height: 19px;
+    margin-left: 38.5px;
+    margin-right: 20px;
+    background: #fff;
+    border: none;
+    border-radius: 2px;
+    text-align: left;
+    padding-left: 10px;
+    cursor: pointer;
+    transition: 0.2s; /*Плавное нажатие*/
+}
+
+label[for=someInput] {
+    padding-top: 30px;
+}
+
+.someInput {
+    margin-top: 30px;
+    display: block;
+    position: absolute;
+}
+
+input[name=someInput] {
+    margin-top: 32.5px;
+    margin-left: 192.5px;
+    width: calc(900px - 40px - 175px - 17px - 10px);
+}
+
+input[type=text] {
+    padding-left: 10px;
+}
+
+button[name=firstButton] svg, button[name=secondButton] svg {
+    height: 10px;
+}
+
+button[name=firstButton]:hover, button[name=secondButton]:hover {
+    background: #ffd;
+}
+
+button[name=firstButton]:active, button[name=secondDiv]:active {
+    background: #ff5;
+}
+
+button[name=firstButton] {
+    margin-top: 10px;
+}
+
+input[name=inputForTask]::placeholder {
+    color: #a1a1a1;
+}
+
+.buttonForFilter.turned svg, button[name=secondButton].turned svg {
+    transform: rotate(180deg);
+}
+
+.buttonForFilter svg, button[name=secondButton] svg {
+    transition: 0.2s;
+}
+
+#thirdDiv {
+    width: 940px;
+    height: 600px;
+    background: #e4e4e4;
+    margin: 20px auto;
+    border-radius: 2px;
+}
+
+#tasksList {
+    width: calc(100% - 90px);
+    height: 550px;
+    overflow-y: auto; /*Скролл*/
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.taskBlock {
+    background: #9deea5;
+    width: 600px;
+    border-radius: 2px;
+    padding: 5px;
+    min-height: 70px;
+    cursor: pointer;
+}
+
+.taskBlockText1 {
+    font-size: 17px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    width: calc(100% - 50px);
+    margin-top: -60px;
+}
+
+.taskBlockText2 {
+    padding-top: 10px;
+    font-size: 10px;
+}
+
+.taskLevel, .taskBlock, .taskDelete {
+    display: inline-block; /* Расположение элементов в линию*/
+    vertical-align: middle; /* Выравнивание элементов посередине*/
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.taskDelete {
+    margin-right: 0;
+    height: 80px;
+    cursor:pointer;
+}
+
+.taskDelete svg {
+    height: 30px;
+    margin-top: 25px;
+}
+
+.taskLevel {
+    width: 100px;
+    height: 80px;
+    line-height: 80px;
+}
+
+.taskBlockButtonFirst svg, .taskBlockButtonFirst svg {
+    width: 20px;
+}
+
+.taskBlockButtons {
+    margin-left: 575px;
+}
+
+.taskBlockButtonFirst {
+    margin-bottom: 15px !important;
+}
+
+.taskBlockButtonSecond {
+    height: 27px;
+    margin-left: -2px;
+}
+
+.taskBlockButtons div {
+    display: block !important;
+}
+
+#Task.canceled .taskBlock, #Task.canceled .taskBlock .normalName {
+    background: rgb(230, 133, 133);
+}
+
+#Task.active .taskBlock {
+    background: #fff;
+}
+
+#Task.done .taskBlock, #Task.done .taskBlock .normalName {
+    background: rgb(116, 221, 116);
+}
+
+.normalName {
+    border: none;
+    width: calc(100% - 50px);
+    font-size: 17px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    background: #fff;
+}
+
+#modalWindow {
+    display:flex; /*Растягиваем элемент*/
+    justify-content:center; /*Располагаем по центру (горизонтально)*/
+    align-items: center; /*Располагаем по центру вертикально*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed; /*Закрепляем на экране*/
+    backdrop-filter: blur(10px);
+}
+
+#window {
+    background: #fff;
+    width: 600px;
+    height: 300px;
+    position:relative;
+    z-index: 100; /*Говорим о важности отображения над остальными элементами*/
+}
+
+.line1, .line2 {
+    width: 2px;
+    height: 30px;
+    background: #000;
+    display: block;
+    position:absolute;
+    margin-left:22px;
+}
+
+.line1 {
+    transform: rotate(45deg);
+}
+
+.line2 {
+    transform: rotate(315deg);
+}
+
+#close {
+    width: 52px;
+    height: 32px;
+    margin-left: calc(100% - 52px);
+    cursor: pointer;
+}
+
+#close:hover, .closeWindow:hover {
+    background: #00ff00;
+}
+
+#close:hover .line1, #close:hover .line2 {
+    background: #fff;
+}
+
+.buttonsForModal button {
+    width: 200px;
+    height: 25px;
+    border-radius: 10px;
+    border: none;
+    cursor:pointer;
+    transition: 0.3s;
+}
+
+.buttonsForModal a button:first-child {
+    background: #0066ff;
+    color: white;
+    margin-right: 20px;
+}
+
+.buttonsForModal button:last-child {
+    background: #d1d1d1;
+}
+
+.buttonsForModal {
+    width: 425px;
+    height: 25px;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+
+.buttonsForModal button:hover {
+    transform: scale(1.1);
+}
+
+#floatWindow {
+    right: 10px;
+    bottom: 10px;
+    position: fixed;
+    width: 300px;
+    height: 100px;
+    background: white;
+    box-shadow: 0 0 10px #999999;
+    border-radius: 5px;
+}
+
+.alertText {
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+.closeWindow {
+    position:absolute;
+    margin-left: calc(300px - 50px);
+    cursor:pointer;
+    width: 50px;
+    height: 32px;
+}
+
+.withoutKrestik {
+    margin-top: -32px;
+}
+
+.withoutGalochka {
+    margin-top: -25px;
+}
