@@ -1,0 +1,52 @@
+ <head> 
+    <script src="todo.js" type="text/javascript"> // Интегрируем JS файл, Подключаем CSS файл
+    </script> 
+    <link href="anStyles.css" rel="stylesheet" type="text/css"> 
+</head>
+
+<body>
+
+    <div class="firstDiv"> 
+        <div class="futureForm"> 
+            <ul>
+                <li>Приоритет:</li>
+                <li>Текст задачи:</li> 
+            </ul>
+            <select name="priority" id="priority"> 
+                <option name="set_low" value="Низкий">Низкий</option>
+                <option name="set_middle" value="Средний">Средний</option>
+                <option name="set_high" value="Высокий">Высокий</option>
+            </select>
+            <input type="text" name="inputForTask" placeholder="Введите текст..." id="firstInput"> 
+            <button type="button" someProperty="nameForUnusualProperty"  name="setButton" id="buttonInTheFirstForm">Добавить задачу...</button>
+        </div> 
+    </div>
+
+    <div class="secondDiv"> 
+        <div class="objectsFromSecondDiv">
+            <label for="someCheck0" class="filterText">Отмененная</label><input type="checkbox" name="someCheck0" checked class="someCheck0" id="zeroCheckBox" onclick="ckeckOfCkeckBoxes()">
+            <label for="someCheck1" class="filterText">Завершенная</label><input type="checkbox" name="someCheck1" checked class="someCheck1" id="firstCheckBox" onclick="ckeckOfCkeckBoxes()">
+            <label for="someCheck2" class="filterText">Низкий</label><input type="checkbox" name="someCheck2" checked  class="someCheck2" id="secondCheckBox" onclick="ckeckOfCkeckBoxes()">
+            <label for="someCheck3" class="filterText">Средний</label><input type="checkbox" name="someCheck3" checked  class="someCheck3" id="thirdCheckBox" onclick="ckeckOfCkeckBoxes()">
+            <label for="someCheck4" class="filterText">Высокий</label><input type="checkbox" name="someCheck4" checked  class="someCheck4" id="fourthCheckBox"onclick="ckeckOfCkeckBoxes()">
+            <label id="labelFDate" for="firstButton">Сортировка по дате:</label> 
+            <input type="button" name="firstButton" class="buttonForFilter" onclick="sortByDate()" value="По убыванию">
+        </div>
+    </div>
+
+    <div class="thirdDiv">
+        <div class="tasksList">
+
+        </div>
+    </div>
+        
+    <div class="alertWindow" id="alertWindow">
+        <div class="textInAlertWindow">
+            <p>Поле текста задачи не может быть пустым!</p>
+        </div>
+        <div class="buttonInAlertWindow">
+            <button onclick="closeAlertWindow()">Ок</button>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
